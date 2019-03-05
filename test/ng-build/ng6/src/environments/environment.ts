@@ -6,3 +6,16 @@
 export const environment = {
   production: false
 };
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA3tcGigI-NfT0HC7ise9KjqeDSb5MdqM8",
+    authDomain: "lightbcenter.firebaseapp.com",
+    databaseURL: "https://lightbcenter.firebaseio.com",
+    projectId: "lightbcenter",
+    storageBucket: "lightbcenter.appspot.com",
+    messagingSenderId: "662892844726"
+  };
+  firebase.initializeApp(config);
+</script>
