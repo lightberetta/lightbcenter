@@ -59,3 +59,20 @@ export {
 } from './interfaces';
 
 export { RealtimeDatabaseURL };
+export class FirebaseService {
+  constructor(
+    public afs: AngularFirestore,
+  ){}
+  addUser(value){
+    return new Promise<any>((resolve, reject) => {
+      this.afs.collection('/users').add({
+        name: value.name,
+        surname: value.surname,
+        age: parseInt(value.age)
+      })
+      .then((res) => {
+        resolve(res)
+      },err => reject(err))
+    })
+  }
+}
